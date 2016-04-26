@@ -1,0 +1,45 @@
+<ion-view view-title="工程概况">
+    <ion-nav-buttons side="left">
+        <button class="button button-icon ion-ios-arrow-left" nav-direction="back"
+                ui-sref="security-check-project-edit">
+        </button>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <button class="button button-clear" ui-sref="co-security-check-subject-all-edit">确定</button>
+    </ion-nav-buttons>
+
+    <ion-content>
+        <div class="list">
+            <label class="item item-input">
+                <span class="input-label">建筑面积：</span>
+                <input type="text" placeholder="请输入建筑面积">
+                <span class="input-label">m<sup>2</sup></span>
+            </label>
+            <label class="item item-input">
+                <span class="input-label">造价：</span>
+                <input type="password" placeholder="请输入造价">
+                <span class="input-label">万元</span>
+            </label>
+            <label class="item item-input">
+                <span class="input-label">地上层数：</span>
+                <input type="text" placeholder="请输入地上层数">
+                <span class="input-label">层</span>
+            </label>
+            <label class="item item-input">
+                <span class="input-label">地下层数：</span>
+                <input type="password" placeholder="请输入地下层数">
+                <span class="input-label">层</span>
+            </label>
+            <label class="item item-input item-icon-right" ui-sref="subject-intro-structure">
+                <span class="input-label">结构类型：</span>
+                全现浇
+                <i class="icon ion-ios-arrow-right icon-edit"></i>
+            </label>
+            <label class="item item-input">
+                <span class="input-label">参建人数：</span>
+                <input type="password" placeholder="请输入参建人数">
+                <span class="input-label">人</span>
+            </label>
+        </div>
+    </ion-content>
+</ion-view>

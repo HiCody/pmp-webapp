@@ -1,0 +1,25 @@
+<ion-view view-title="{{checkItem.checkItemName}}">
+    <ion-nav-buttons side="left">
+        <button class="button button-icon ion-ios-arrow-back" nav-direction="back" ui-sref="security-check-project-edit">
+        </button>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <button class="button button-clear" ui-sref="security-check-add-subject">确定</button>
+    </ion-nav-buttons>
+
+    <ion-content scroll="false">
+        <ion-scroll>
+            <ion-list>
+                <ion-checkbox ng-model="item.selected" ng-click="showSelected(item)" ng-repeat='item in checkProblems'>
+                    {{item.checkProblemName}}
+                </ion-checkbox>
+            </ion-list>
+        </ion-scroll>
+
+        <ion-list>
+            <ion-item class="item positive center" ng-click='segureToNewIssure()'>
+                <i class="icon ion-plus"></i> 新增检查内容
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

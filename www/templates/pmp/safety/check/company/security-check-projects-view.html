@@ -1,0 +1,53 @@
+<ion-view view-title="安全检查项目一览" class="safety-check-company-checkview">
+    <ion-nav-buttons side="left">
+        <button class="button button-icon ion-ios-arrow-left" nav-direction="back" ui-sref="frame/home">
+        </button>
+    </ion-nav-buttons>
+
+    <ion-content scroll="false">
+        <!-- 固定显示区 开始 -->
+        <div class="fixed-top item-input-inset">
+            <label class="item-input-wrapper ">
+                <input class="width-full center" type="text" placeholder="搜索">
+            </label>
+        </div>
+        <!-- 固定显示区 结束 -->
+
+        <!-- 可滚动显示区 开始 -->
+        <ion-scroll class="list-scroll">
+            <!--<ion-refresher pulling-text="下拉刷新" on-refresh="doRefresh()"></ion-refresher>-->
+            <ul class="list" ui-sref="security-check-projects-timeline">
+                <li class="item">
+                    <div class="item-content">
+                        <h2>辽阳西路购物中心项目</h2>
+                        <div class="item-subcontent">
+                            <p>项目经理：<span>关羽</span></p>
+                            <p>技术负责人：<span>张国荣</span></p>
+                            <p>质检员：<span>吴彦祖</span></p>
+                            <p>安全员：<span>项羽</span></p>
+                        </div>
+                        <p>最新检查时间：2016-03-23<span class="pull-right">朱佳威</span></p>
+                        <i class="icon ion-ios-arrow-right badge"></i>
+                    </div>
+                </li>
+            </ul>
+            <ul class="list" ui-sref="security-check-projects-timeline">
+                <li class="item">
+                    <div class="item-content">
+                        <h2>辽阳西路购物中心项目</h2>
+
+                        <div class="item-subcontent">
+                            <p>项目经理：<span>关羽</span></p>
+                            <p>技术负责人：<span>张国荣</span></p>
+                            <p>质检员：<span>吴彦祖</span></p>
+                            <p>安全员：<span>项羽</span></p>
+                        </div>
+                        <p>最新检查时间：2016-03-23<span class="pull-right">朱佳威</span></p>
+                        <i class="icon ion-ios-arrow-right badge"></i>
+                    </div>
+                </li>
+            </ul>
+            <p class="center">已加载全部</p>
+        </ion-scroll>
+    </ion-content>
+</ion-view>

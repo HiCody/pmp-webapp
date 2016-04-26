@@ -1,0 +1,61 @@
+<ion-view view-title="安全管理说明">
+<!--     <ion-nav-buttons side="left">
+        <button class="button button-icon ion-ios-arrow-left" nav-direction="back" ui-sref="security-info">
+        </button>
+    </ion-nav-buttons>
+ -->
+    <ion-content class="safety-info-instructions" nav-direction="forward" overflow-scroll="false">
+        <ion-list>
+            <div class="item" ng-click="showEnclosure = !showEnclosure">
+                <i class="icon ion-ios-arrow-down f18"
+                   ng-class="showEnclosure ? 'ion-ios-arrow-down':'ion-ios-arrow-up'"> </i>2016年3月22日
+            </div>
+            <div class="item enclosure" ng-show="!showEnclosure">
+                <div class="row">
+                    <div class="col col-25" ng-click="show()">
+                        <img src="img/pmp/safety/doc.svg">
+
+                        <p>安全管理.doc</p>
+                    </div>
+                    <div class="col col-25" ng-click="show()">
+                        <img src="img/pmp/safety/ppt.svg">
+
+                        <p>材料管理.ppt</p>
+                    </div>
+                    <div class="col col-25" ng-click="show()">
+                        <img src="img/pmp/safety/pdf.svg">
+
+                        <p>设备管理.pdf</p>
+                    </div>
+                    <div class="col col-25" ng-click="show()">
+                        <img src="img/pmp/safety/txt.svg">
+
+                        <p>设备管理.txt</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col col-25" ng-click="show()">
+                        <img src="img/pmp/safety/xls.svg">
+
+                        <p>安全管理.xls</p>
+                    </div>
+                    <div class="col col-25" ng-click="show()">
+                        <img src="img/pmp/safety/rar.svg">
+
+                        <p>材料管理.rar</p>
+                    </div>
+                    <div class="col col-25" ng-click="show()" ui-sref="">
+                        <img src="img/pmp/safety/img.svg">
+
+                        <p>设备管理.jpg</p>
+                    </div>
+                    <div class="col col-25" ng-click="show()" ui-sref="">
+                        <img src="img/pmp/safety/img.svg">
+
+                        <p>设备管理.png</p>
+                    </div>
+                </div>
+            </div>
+        </ion-list>
+    </ion-content>
+</ion-view>

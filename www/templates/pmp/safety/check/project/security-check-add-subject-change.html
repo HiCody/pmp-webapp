@@ -1,0 +1,14 @@
+<ion-view view-title="变更安全检查内容">
+<!--     <ion-nav-buttons side="left">
+        <button class="button button-icon ion-ios-arrow-back" nav-direction="back" ui-sref="security-check-add-subject">
+        </button>
+    </ion-nav-buttons> -->
+
+    <ion-content>
+        <ion-list>
+            <ion-checkbox ng-click="!item.disabled?showConfirm(item):null" ng-repeat='item in safetyContents'
+                          ng-model='item.selected' ng-disabled='item.disabled'>{{item.checkContentName}}
+            </ion-checkbox>
+        </ion-list>
+    </ion-content>
+</ion-view>

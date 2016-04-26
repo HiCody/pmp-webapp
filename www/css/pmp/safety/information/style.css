@@ -1,0 +1,125 @@
+/* 安全资料 开始 */
+.safety-info-view {
+
+}
+
+.safety-info-view .list {
+
+}
+
+.safety-info-view .list .item {
+    margin: 0;
+}
+
+.safety-info-view .list .item-divider {
+    color: #babbbb;
+    font-size: 14px;
+    border: 0;
+}
+
+.safety-info-view .list .item-detail {
+    padding: 0;
+    border-color: #f4f4f4;
+}
+
+.safety-info-view .list .item-detail .row {
+    padding: 0;
+}
+
+.safety-info-view .list .item-detail .row + .row {
+    margin: 0;
+}
+
+.safety-info-view .list .item-detail .row .col {
+    border-right: 1px solid #f4f4f4;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 2px;
+    padding-right: 2px;
+    border-bottom: 1px solid #f4f4f4;
+    text-decoration: none;
+}
+
+.safety-info-view .list .item-detail .row .col.activated {
+    background-color: #e2e2e2;
+}
+
+.safety-info-view .list .item-detail .row .col:last-of-type {
+    border-right: 0;
+}
+
+.safety-info-view .list .item-detail .row .col img {
+    max-width: 35px;
+    max-height: 35px;
+    border: none;
+}
+
+.safety-info-view .list .item-detail .row .col p {
+    font-size: 12px;
+    max-height: 34px;
+    white-space: normal;
+    text-overflow: clip;
+    line-height: 16px;
+}
+
+/* 安全资料 结束 */
+
+/* 安全资料 安全管理说明 开始 */
+.safety-info-instructions {
+}
+
+.safety-info-instructions .list {
+    background-color: transparent;
+}
+
+.safety-info-instructions .list .enclosure {
+    background-color: transparent;
+    border: 0;
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0;
+}
+
+.safety-info-instructions .list .item-divider {
+    background-color: white;
+}
+
+.safety-info-instructions .list .enclosure .row {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.safety-info-instructions .list .enclosure .row .col {
+    text-align: center;
+}
+
+.safety-info-instructions .list .enclosure .row .col.activated {
+    background-color: #e2e2e2;
+}
+
+.safety-info-instructions .list .enclosure .row .col img {
+    max-width: 60px;
+    max-height: 60px;
+}
+
+.safety-info-instructions .list .enclosure .row .col p {
+    overflow: hidden;
+    white-space: normal;
+    word-break: break-all;
+    max-height: 34px;
+    line-height: 16px;
+    text-align: left;
+    font-size: 12px;
+    color: #999999;
+    margin: 0;
+}
+
+/* 安全资料 安全管理说明 结束 */
+
+/* 公用 图片预览 开始 */
+.safety-info-picture-preview img {
+    max-width: 100%;
+}
+
+/* 公用 图片预览 结束 */

@@ -1,0 +1,281 @@
+<ion-view view-title="安全检查">
+    <ion-nav-buttons side="left">
+        <button class="button button-icon ion-ios-arrow-left" nav-direction="back"
+                ui-sref="security-check-projects-timeline">
+        </button>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <button class="button button-clear">提交</button>
+    </ion-nav-buttons>
+
+    <ion-content class="safety-check-company-checkproject safety-check-company-checkproject-edit">
+        <div class="item no-border">
+            <h2>辽阳东路购物中心项目</h2>
+        </div>
+        <ul class="list no-margin-bottom">
+            <div class="item item-divider item-icon-right item-divider-title"
+                 ng-click="subjectPersonInfo = !subjectPersonInfo">
+                <h3>项目人员信息</h3>
+                <i class="icon f18" ng-class="subjectPersonInfo?'ion-ios-arrow-down':'ion-ios-arrow-up'"></i>
+            </div>
+            <li class="item no-padding-top no-padding-bottom no-border p-r-40" ng-show="!subjectPersonInfo"
+                ui-sref="project-personnel">
+                <p>项目经理：张国荣<span>13822596590</span></p>
+
+                <p>技术负责人：张国荣<span>15896635558</span></p>
+
+                <p>质检员：吴彦祖<span>18800265598</span></p>
+
+                <p>安全员：张国荣<span>13456985210</span></p>
+                <i class="icon ion-ios-arrow-right icon-edit"></i>
+            </li>
+            <div class="item item-divider item-icon-right item-divider-title" ng-click="subjectIntro = !subjectIntro">
+                <h3>项目概况</h3>
+                <i class="icon f18" ng-class="subjectIntro?'ion-ios-arrow-down':'ion-ios-arrow-up'"></i>
+            </div>
+            <li class="item no-padding-top no-padding-bottom no-border" ui-sref="project-overview"
+                ng-show="!subjectIntro">
+                <table class="width-full">
+                    <tr>
+                        <td><p>建筑面积：222.0m<sup>2</sup></p></td>
+                        <td><p>造价：1200万元</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>地上层数：33层</p></td>
+                        <td><p>地上层数：12层</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>结构类型：全现浇</p></td>
+                        <td><p>参建人数：5人</p></td>
+                    </tr>
+                </table>
+                <i class="icon ion-ios-arrow-right icon-edit"></i>
+            </li>
+            <div class="item item-divider item-icon-right item-divider-title">
+                <h3>项目时间与进展</h3>
+            </div>
+            <li class="item no-padding-top no-padding-bottom no-border">
+                <p ng-click="showActualStartTime()">实际开工时间<i class="icon ion-ios-arrow-right"></i><span>{{actualStartTime.date | date:'yyyy-MM-dd'}}</span>
+                </p>
+
+                <p ng-click="showActualEndTime()">实际完工时间<i class="icon ion-ios-arrow-right"></i><span>{{actualEndTime.date | date:'yyyy-MM-dd'}}</span>
+                </p>
+
+                <p>形象进度 <textarea class="border-box width-75" placeholder="请填写形象进度"></textarea></p>
+            </li>
+            <div class="item item-divider item-icon-right item-divider-title">
+                <h3>请填写检查情况</h3>
+            </div>
+            <li class="item no-padding-top no-padding-bottom">
+                <p ng-click="showCheckTime()">检查日期<i class="icon ion-ios-arrow-right"></i><span>{{checkTime.date | date:'yyyy-MM-dd'}}</span>
+                </p>
+
+                <p ui-sref="check-random-info-edit">抽查情况<i class="icon ion-ios-arrow-right"></i><span class="lighter">未选择</span>
+                </p>
+            </li>
+            <div class="item item-divider item-icon-right item-divider-title">
+                <h3>请填写改进要求</h3>
+            </div>
+            <li class="item">
+                <textarea class="border-box width-full" placeholder="请填写改进要求"></textarea>
+            </li>
+        </ul>
+        <ul class="list ">
+            <div class="item item-divider item-icon-right item-divider-title no-border-top">
+                <h3>相关问题<i class="icon ion-ios-plus positive" ui-sref="related-issue"></i><!--<i class="positive-bg">+</i>-->
+                </h3>
+            </div>
+            <li class="item no-padding-left no-padding-right no-border">
+                <ul class="list relative-issue-list">
+                    <li class="item item-divider center positive" ui-sref="co-security-check-location">
+                        <i class="icon ion-plus"></i>
+                        添加安全检查内容
+                    </li>
+                </ul>
+            </li>
+            <li class="item no-padding-left no-padding-right no-border">
+
+                <ul class="list relative-issue-list">
+                    <li class="item item-divider item-button-right f14 no-border-bottom">
+                        <strong>一、骨</strong>
+                        <button class="button button-clear f14" ng-click="deleteCheckConfirm()">
+                            删除
+                        </button>
+                    </li>
+                    <li class="item item-divider f14">检查图片</li>
+                    <!-- 上传图片 组件 开始 -->
+                    <li class="item row">
+                        <div class="upload-img-box col-25" ng-click="addAttachment()">
+                            <div>
+                                <i>+</i>
+
+                                <p>上传图片</p>
+                            </div>
+                        </div>
+                        <div class="upload-img-box col-25" ng-repeat="img in image_list">
+                            <img src="{{img}}">
+                        </div>
+                    </li>
+                    <!-- 上传图片 组件 结束 -->
+                    <li class="item item-divider item-button-right f14">
+                        检查问题
+                        <button class="button button-clear positive f14" ui-sref="co-security-check-add-subject">
+                            添加
+                        </button>
+                    </li>
+                    <li class="item check-issue-item">
+                        <h3 class="check-issue-item-title">
+                            <span class="title">检查内容</span>
+                            <span>悬挑式脚手架检查</span>
+                            <button class="button button-clear positive f14" ng-click="deleteCheckConConfirm()">
+                                删除
+                            </button>
+                        </h3>
+                        <table>
+                            <tr>
+                                <th><p><i class="icon ion-record positive margin-right-5"></i>检查项目</p></th>
+                                <th><p>负载</p></th>
+                                <th rowspan="3">
+
+                                </th>
+                            </tr>
+                            <tr>
+                                <td><p>检查问题</p></td>
+                                <td><p>施工负载堆放不均匀每处</p></td>
+                            </tr>
+                            <tr>
+                                <td><p>检查问题</p></td>
+                                <td><p>架体施工荷载超过设计规定</p></td>
+                            </tr>
+                        </table>
+                    </li>
+                    <li class="item check-issue-item">
+                        <h3 class="check-issue-item-title">
+                            <span class="title">检查内容</span>
+                            <span>悬挑式脚手架检查</span>
+                            <button class="button button-clear positive f14" ng-click="deleteCheckConConfirm()">
+                                删除
+                            </button>
+                        </h3>
+
+                        <table>
+                            <tr>
+                                <th><p><i class="icon ion-record positive margin-right-5"></i>检查项目</p></th>
+                                <th><p>负载</p></th>
+                                <th rowspan="3">
+
+                                </th>
+                            </tr>
+                            <tr>
+                                <td><p>检查问题</p></td>
+                                <td><p>施工负载堆放不均匀每处</p></td>
+                            </tr>
+                            <tr>
+                                <td><p>检查问题</p></td>
+                                <td><p>架体施工荷载超过设计规定</p></td>
+                            </tr>
+                        </table>
+                    </li>
+                    <li class="item item-divider item-button-right f14 no-border-bottom">
+                        <strong>二、骨</strong>
+                        <button class="button button-clear f14" ng-click="deleteCheckConfirm()">
+                            删除
+                        </button>
+                    </li>
+                    <li class="item item-divider f14">检查图片</li>
+                    <!-- 上传图片 组件 开始 -->
+                    <li class="item row">
+                        <div class="upload-img-box col-25" ng-click="addAttachment()">
+                            <div>
+                                <i>+</i>
+
+                                <p>上传图片</p>
+                            </div>
+                        </div>
+                        <div class="upload-img-box col-25" ng-repeat="img in image_list">
+                            <img src="{{img}}">
+                        </div>
+                    </li>
+                    <!-- 上传图片 组件 结束 -->
+                    <li class="item item-divider item-button-right f14">
+                        检查问题
+                        <button class="button button-clear positive f14" ui-sref="co-security-check-add-subject">
+                            添加
+                        </button>
+                    </li>
+                    <li class="item check-issue-item">
+                        <h3 class="check-issue-item-title">
+                            <span class="title">检查内容</span>
+                            <span>悬挑式脚手架检查</span>
+                            <button class="button button-clear positive f14" ng-click="deleteCheckConConfirm()">
+                                删除
+                            </button>
+                        </h3>
+                        <table>
+                            <tr>
+                                <th><p><i class="icon ion-record positive margin-right-5"></i>检查项目</p></th>
+                                <th><p>负载</p></th>
+                                <th rowspan="3"></th>
+                            </tr>
+                            <tr>
+                                <td><p>检查问题</p></td>
+                                <td><p>施工负载堆放不均匀每处</p></td>
+                            </tr>
+                            <tr>
+                                <td><p>检查问题</p></td>
+                                <td><p>架体施工荷载超过设计规定</p></td>
+                            </tr>
+                        </table>
+                    </li>
+                    <li class="item check-issue-item">
+                        <h3 class="check-issue-item-title">
+                            <span class="title">检查内容</span>
+                            <span>悬挑式脚手架检查</span>
+                            <button class="button button-clear positive f14" ng-click="deleteCheckConConfirm()">
+                                删除
+                            </button>
+                        </h3>
+                        <table>
+                            <tr>
+                                <th><p><i class="icon ion-record positive margin-right-5"></i>检查项目</p></th>
+                                <th><p>负载</p></th>
+                                <th rowspan="3"></th>
+                            </tr>
+                            <tr>
+                                <td><p>检查问题</p></td>
+                                <td><p>施工负载堆放不均匀每处</p></td>
+                            </tr>
+                            <tr>
+                                <td><p>检查问题</p></td>
+                                <td><p>架体施工荷载超过设计规定</p></td>
+                            </tr>
+                        </table>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </ion-content>
+</ion-view>
+
+<!-- 显示 实际开工时间 弹框 -->
+<script id="actual-start-time.html" type="text/ng-template">
+    <ion-modal-view class="show-time-modal">
+        <onezone-datepicker datepicker-object="actualStartTime">
+        </onezone-datepicker>
+    </ion-modal-view>
+</script>
+<!-- 显示 实际结束时间 弹框 -->
+<script id="actual-end-time.html" type="text/ng-template">
+    <ion-modal-view class="show-time-modal">
+        <onezone-datepicker datepicker-object="actualEndTime">
+        </onezone-datepicker>
+    </ion-modal-view>
+</script>
+<!-- 显示 检查时间 弹框 -->
+<script id="check-time.html" type="text/ng-template">
+    <ion-modal-view class="show-time-modal">
+        <onezone-datepicker datepicker-object="checkTime">
+        </onezone-datepicker>
+    </ion-modal-view>
+</script>
+

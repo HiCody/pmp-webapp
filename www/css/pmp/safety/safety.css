@@ -1,0 +1,234 @@
+/* 公共类 */
+/* 字体 */
+.f12, .item .f12 {
+    font-size: 12px;
+}
+
+.f14, .item .f14 {
+    font-size: 14px;
+}
+
+.f16, .item .f16 {
+    font-size: 16px;
+}
+
+.f18, .item .f18 {
+    font-size: 18px;
+}
+
+/* 背景颜色 */
+.scroll-content {
+    background-color: #f5f5f5;
+    padding: 0;
+    margin: 0;
+}
+
+.ion-ios-arrow-right {
+    color: #999999;
+}
+
+/* 布局 */
+.left {
+    text-align: left;
+}
+
+.center {
+    text-align: center;
+}
+
+.width-full {
+    width: 100%;
+}
+
+.width-75 {
+    width: 75%;
+}
+
+.height-44 {
+    height: 44px;
+}
+
+.no-padding {
+    padding: 0;
+}
+
+.no-padding-top {
+    padding-top: 0;
+}
+
+.no-padding-bottom {
+    padding-bottom: 0;
+}
+
+.no-padding-left {
+    padding-left: 0;
+}
+
+.no-padding-right {
+    padding-right: 0;
+}
+
+.no-margin-bottom {
+    margin-bottom: 0;
+}
+
+.no-border {
+    border: none;
+}
+
+.no-border-top {
+    border-top: none;
+}
+
+.no-border-bottom {
+    border-bottom: none !important;
+}
+
+.p-r-40 {
+    padding-right: 40px;
+}
+
+/* 其他 */
+.btn-fixed-add {
+    font-size: 34px;
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    z-index: 2;
+    width: 48px;
+    height: 48px;
+    line-height: 48px;
+    border-radius: 50%;
+    text-align: center;
+    box-shadow: 2px 3px 5px 1px rgba(0, 0, 0, .5);
+}
+
+/* 公共类 结束 */
+
+/* 公共 时间弹框 开始 */
+.onezone-datepicker {
+    overflow: visible;
+    max-height: 300px !important;
+}
+
+.onezone-datepicker-navigation-arrow,
+.onezone-datepicker-selection-button {
+    color: #387ef5 !important;
+}
+
+.onezone-datepicker-button,
+.onezone-datepicker-button:after {
+    border-color: #fff !important;
+}
+
+.onezone-datepicker-active-day,
+.onezone-datepicker-active-day:hover {
+    border-color: #387ef5 !important;
+}
+
+.onezone-datepicker.onezone-datepicker-show {
+    background-color: #fff !important;
+}
+
+.modal {
+    background: none;
+}
+
+.show-time-modal.modal {
+    top: 20%;
+    right: 20%;
+    bottom: 20%;
+    left: 9%;
+    min-height: 300px;
+    width: 82%;
+}
+
+.modal-backdrop-bg {
+    transition: opcity 300ms ease-in-out;
+    background-color: #000;
+    opacity: .5;
+}
+
+/* 公共 时间弹框 结束 */
+
+/* 公共 操作表 开始 */
+.platform-android .action-sheet .action-sheet-title, .platform-android .action-sheet .button {
+    color: #007aff;
+    text-align: center;
+    border-bottom: 1px solid #dddddd;
+    font-weight: 500;
+    font-size: 21px;
+}
+
+.platform-android .action-sheet .action-sheet-title, .platform-android .action-sheet .button:last-of-type {
+    border-bottom: 0;
+}
+
+.platform-android .action-sheet-group {
+    border-radius: 4px;
+    margin-bottom: 8px;
+
+}
+
+.platform-android .action-sheet-cancel {
+    display: block;
+    background-color: white;
+    margin-bottom: 8px;
+}
+
+.platform-android .action-sheet {
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+/* 公共 操作表 结束 */
+
+/* 公共 上传图片样式 开始 */
+.upload-img-box {
+    float: left;
+    padding: 5px;
+    height: 80px;
+    text-align: center;
+}
+
+.upload-img-box div {
+    background: #ddd;
+    height: 100%;
+}
+
+.upload-img-box i {
+    color: #b4b4b4;
+    font-size: 40px;
+    height: 30px;
+    line-height: 30px;
+    padding: 0;
+    border: none;
+    text-align: center
+}
+
+.upload-img-box p {
+    color: #b4b4b4;
+    padding: 0 !important;
+    text-align: center !important;
+    text-overflow: clip;
+}
+
+.upload-img-box img {
+    height: 80px;
+    width: 100%;
+}
+
+/* 公共 上传图片样式 结束 */
+
+/* 公共 检查内容显示 开始 */
+.check-issue-item {
+}
+
+.check-issue-item-title button {
+    min-height: 32px;
+    line-height: 32px;
+    position: absolute;
+    right: 10px
+}
+
+/* 公共 检查内容显示 开始 */

@@ -1,0 +1,21 @@
+<ion-view view-title="新增检查问题">
+<!--     <ion-nav-buttons side="left">
+        <button class="button button-icon ion-ios-arrow-back" nav-direction="back" ui-sref="security-check-add-issue">
+        </button>
+    </ion-nav-buttons> -->
+    <ion-nav-buttons side="right">
+        <button class="button button-clear" ng-click='segureToIssure()'>确定</button>
+    </ion-nav-buttons>
+
+    <ion-content>
+        <ion-list>
+            <ion-item class='item-divider'>
+                <p>自定义检查问题</p>
+            </ion-item>
+            <ion-item>
+                <textarea class="no-padding width-full" rows="10" ng-model='customerPro.text'
+                          ng-change="checkText()"></textarea>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

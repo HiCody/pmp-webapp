@@ -1,0 +1,217 @@
+/* 公用 头部导航切换 开始*/
+
+.has-tabs-header .tab-title {
+    width: 200px;
+    height: 31px;
+    line-height: 31px;
+    position: absolute;
+    left: 50%;
+    margin-left: -100px;
+    top: 7px;
+}
+
+.has-tabs-header .bar .tab-title .button.button-light:hover {
+    color: #387ef5;
+}
+
+.has-tabs-header .tab-title .button-outline {
+    border-color: white;
+    color: white;
+}
+
+.has-tabs-header .tab-title .button-light {
+    color: #387ef5;
+}
+
+.has-tabs-header .bar .tab-title .button {
+    height: 30px;
+    line-height: 30px;
+}
+
+
+/*头部徽章*/
+
+.has-tabs-header .has-badge-assertive {
+    position: relative;
+}
+
+.has-tabs-header .badge.badge-assertive {
+    font-size: 1px;
+    line-height: 18px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 18px;
+    height: 18px;
+    padding: 0;
+    border-radius: 50%;
+    font-weight: normal;
+}
+
+
+/* 公用 头部导航切换 开始*/
+
+
+/* 检查列表页 开始 */
+
+.safety-check-project-list .filter-scroll {
+    position: absolute !important;
+    top: 44px !important;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.safety-check-project-list .border-right {
+    border-right: 1px solid #ccc;
+}
+
+.safety-check-project-list .border-bottom {
+    border-bottom: 1px solid lightgray;
+}
+
+.safety-check-project-list .badge {
+    font-weight: normal;
+}
+
+.safety-check-project-list.item-complex .item-content,
+.item-radio .item-content {
+    padding: 10px;
+}
+
+.safety-check-project-list .scroll {
+    height: 100%;
+}
+
+.safety-check-project-list .list {}
+
+.safety-check-project-list .list .check-icon {
+    width: 47px;
+    height: 47px;
+    line-height: 16px;
+    border-radius: 50%;
+    text-align: center;
+    color: white;
+    padding-top: 4px;
+    margin-left: -3px;
+    margin-top: -3px;
+}
+
+.safety-check-project-list .list .badge {
+    position: absolute;
+    right: 20px;
+    font-weight: normal;
+}
+
+.safety-check-project-list .security-filte-all {
+    position: absolute;
+    top: 43px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: left;
+}
+
+.safety-check-project-list .security-filte-all .list .item.padding {
+    padding: 10px 16px;
+}
+
+.safety-check-project-list .security-filte-all .list .item-input {
+    padding: 3px 16px;
+}
+
+.safety-check-project-list .security-filte-all .list .item-content {
+    padding: 10px 16px;
+}
+
+.safety-check-project-list .security-filte-all .list .item-radio .radio-icon {
+    font-size: 20px;
+    top: -9px;
+    color: #387ef5;
+}
+
+.safety-check-project-list .security-filte-all .list {
+    z-index: 5;
+}
+
+.safety-check-project-list .security-filte-all.ng-hide-add,
+.safety-check-project-list .security-filte-all.ng-hide-remove {
+    transition: 0.3s linear all;
+    -webkit-transition: 0.3s linear all;
+}
+
+.safety-check-project-list .security-filte-all.ng-hide-add {
+    height: 100%;
+}
+
+.safety-check-project-list .security-filte-all.ng-hide-add.ng-hide-add-active {
+    height: 0;
+    overflow: hidden;
+}
+
+.safety-check-project-list .security-filte-all.ng-hide-remove {
+    height: 0;
+    overflow: hidden;
+}
+
+.safety-check-project-list .security-filte-all.ng-hide-remove.ng-hide-remove-active {
+    height: 100%;
+}
+
+.safety-check-project-list .check-choose {
+    position: fixed;
+    top: 44px;
+    left: 0;
+    z-index: 5;
+    padding: 0;
+    height: 45px;
+}
+
+
+/* 检查列表页 结束 */
+
+
+/* 新增检查 开始 */
+
+.safety-check-project-add ion-scroll {
+    position: absolute;
+    top: 105px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+
+/* 新增检查 结束 */
+
+
+/*弹出框*/
+
+/*.security-check-add-checkType .item.my-popup {
+    padding: 15px;
+    padding-left: 20px;
+}*/
+
+.customPopover .popup-head {
+    padding: 0 !important;
+    border-bottom: none !important;
+}
+
+.customPopover .popup-body {
+    padding: 0px !important;
+}
+
+.customTimerPopover .popup{
+    width: 300px;
+}
+
+.customTimerPopover .popup-head {
+    padding: 0 !important;
+    border-bottom: none !important;
+}
+
+.customTimerPopover .popup-body {
+    padding: 0 !important;
+}
+
+/*弹出框 结束*/

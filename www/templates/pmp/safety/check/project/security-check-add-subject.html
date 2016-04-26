@@ -1,0 +1,38 @@
+<ion-view view-title="新增检查">
+   <!--  <ion-nav-buttons side="left">
+        <button class="button button-icon ion-ios-arrow-back" nav-direction="back" ui-sref="security-check-add">
+        </button>
+    </ion-nav-buttons> -->
+    <ion-nav-buttons side="right">
+        <button class="button button-clear" ng-click='passCheckInfoProblem();'>确定</button>
+    </ion-nav-buttons>
+
+    <ion-content scroll="false">
+        <!-- 固定显示区 开始 -->
+        <add-safetycontent data="safetyContent"></add-safetycontent>
+        <!-- 固定显示区 结束 -->
+
+        <!-- 可滚动显示区 开始 -->
+        <ion-scroll class="safety-check-project-add">
+            <ion-list class='list-inset' ng-repeat='item in checkItems'>
+                <ion-item class="item-icon-right">
+                    <i class="icon ion-ios-minus positive" ng-click="showConfirm($index)"></i>
+                    <h3 class="">{{$index+1|ConvertToChineseService}}、检查项目：</h3>
+                </ion-item>
+                <ion-item class="item-icon-right" ng-click='segureToSubjectDetail($index)'>
+                    <i class="icon ion-ios-arrow-right"></i>
+                    <span>{{item.checkItemName}}</span>
+                </ion-item>
+                <ion-item class="item-icon-right">
+                    <i class="icon ion-ios-plus positive" ng-click='addIssues($index)'
+                       ui-sref="security-check-add-issue"></i>
+                    <h3 class="">检查问题：</h3>
+                </ion-item>
+                <ion-item ng-repeat='item in checkItems[$index].checkProblems'>
+                    <p><span>{{$index+1}}.</span>{{item.checkProblemName}}</p>
+                </ion-item>
+            </ion-list>
+        </ion-scroll>
+        <!-- 可滚动显示区 结束 -->
+    </ion-content>
+</ion-view>

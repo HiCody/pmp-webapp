@@ -1,0 +1,43 @@
+{
+    "status": 200,
+    "msg": "",
+    "items": {
+        "total": 1,
+        "page": 1,
+        "records": 3,
+        "rows": [{
+            "companyId": 1005403,
+            "companyName": "测试项目部3",
+            "pCompanyId": 1000398,
+            "companyCheckBaseInfoHistory": { "historyId": 60, "checkDate": "2016-03-23", "checkManName": "朱佳威", "manageManName": "ll", "manageManTel": "666", "qualityManName": "吴彦祖", "qualityManTel": "15896483624", "deptName": "辽阳西路购物中心项目", "technologyManName": "张国荣", "technologyManTel": "15896483623", "safetyManName": "kl", "safetyManTel": "66666666666", "buildAreaSize": "222.0", "costOfConstruction": "1200.0", "landUp": "33", "landDown": "12", "strutClass": 1, "buildPersons": "5", "beginDate": "2016-01-13", "endDate": "2017-06-09", "companyId": 1005403, "strutClassName": "全现浇" }
+        }, {
+            "companyId": 1005412,
+            "companyName": "元图测试项目部",
+            "pCompanyId": 1000398,
+            "companyCheckBaseInfoHistory": {
+                "historyId": 0,
+                "checkDate": null,
+                "checkManName": null,
+                "manageManName": "关羽",
+                "manageManTel": "15896483625",
+                "qualityManName": "吴彦祖",
+                "qualityManTel": "15896483624",
+                "deptName": "辽阳东路购物中心项目",
+                "technologyManName": "张国荣",
+                "technologyManTel": "15896483623",
+                "safetyManName": "张飞",
+                "safetyManTel": "15896483622",
+                "buildAreaSize": "210000",
+                "costOfConstruction": "1000",
+                "landUp": "35",
+                "landDown": "2",
+                "strutClass": 1,
+                "buildPersons": "210",
+                "beginDate": "2016-01-13",
+                "endDate": "2017-06-09",
+                "companyId": 1005412,
+                "strutClassName": "全现浇"
+            }
+        }]
+    }
+}

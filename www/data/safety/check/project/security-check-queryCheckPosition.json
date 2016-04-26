@@ -1,0 +1,25 @@
+{
+    "status": 200,
+    "msg": "",
+    "items": {
+        "total": 1,
+        "page": 1,
+        "records": 5,
+        "rows": [{
+            "checkPosId": 19,
+            "positionName": "iui"
+        }, {
+            "checkPosId": 20,
+            "positionName": "地面"
+        }, {
+            "checkPosId": 21,
+            "positionName": "n n"
+        }, {
+            "checkPosId": 22,
+            "positionName": "测试部位"
+        }, {
+            "checkPosId": 23,
+            "positionName": "好"
+        }]
+    }
+}

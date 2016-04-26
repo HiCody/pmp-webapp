@@ -1,0 +1,114 @@
+<ion-view>
+<!--     <ion-nav-buttons side="left">
+        <button class="button button-icon ion-ios-arrow-left" nav-direction="back" ui-sref="frame/home">
+        </button>
+    </ion-nav-buttons> -->
+    <ion-nav-title class="has-tabs-header">
+        <div class="button-bar tab-title">
+            <a class="button button-outline" ui-sref="security-info" nav-direction="enter">安全资料</a>
+            <a class="button button-light" ui-sref="security-check" nav-direction="enter">安全检查</a>
+        </div>
+    </ion-nav-title>
+    <ion-content class="has-header safety-check-project-list" scroll="false">
+        <!-- 固定显示区 开始 -->
+        <div class="row center border-bottom height-44">
+            <div class="col" ng-click="showFilter('filterType')">
+                <p class="title border-right">{{leftSelected}}
+                    <i class="icon" ng-class="filterType? 'ion-chevron-up':'ion-chevron-down'"></i>
+                </p>
+            </div>
+            <div class="col" ng-click="showFilter('filterDetail')">
+                <p class="title">筛选
+                    <i class="icon" ng-class="filterDetail ? 'ion-chevron-up':'ion-chevron-down'"></i>
+                </p>
+            </div>
+            <!--点击全部，显示列表-->
+            <div class="security-filte-all ng-hide" ng-show="filterType">
+                <div class="popover-bg" ng-click="hideFilter()"></div>
+                <ion-list class="list">
+                    <ion-radio class="f14" ng-model="ret.choice" ng-value="item.lable" ng-repeat="item in stateList" ng-click="hideFilter(item)">{{item.lable}}
+                    </ion-radio>
+                </ion-list>
+            </div>
+            <!--点击筛选，显示列表-->
+            <div class="security-filte-all ng-hide" ng-show="filterDetail">
+                <div class="popover-bg" ng-click="hideFilter()"></div>
+                <ion-list class="list ">
+                    <label class="item item-input f14">检查人员：
+                        <input type="text" ng-model='filterInfo.checkUser' placeholder="请输入检查人员">
+                    </label>
+                    <a class="item item-icon-right f14 padding" ng-click="showCheckTypeSheet()">
+                        检查类型：{{filterInfo.checkType}}
+                        <i class="icon button-small ion-chevron-right"></i>
+                    </a>
+                    <a class="item item-icon-right f14 padding" ng-click="showCheckIsTroubleSheet()">
+                        是否存在问题：{{filterInfo.hasProblem}}
+                        <i class="icon button-small ion-chevron-right"></i>
+                    </a>
+                    <a class="item item-icon-right f14 padding" ng-click="showStartTime()">
+                        开始时间：{{filterInfo.beginDate| date:'yyyy-MM-dd'}}
+                        <i class="icon button-small ion-chevron-right"></i>
+                    </a>
+                    <a class="item item-icon-right f14 padding" ng-click="showEndTime()">
+                        结束时间：{{filterInfo.endDate | date:'yyyy-MM-dd'}}
+                        <i class="icon button-small ion-chevron-right"></i>
+                    </a>
+                    <label class="item item-input f14">处理人员：
+                        <input type="text" placeholder="请输入处理人员" ng-model='filterInfo.solveUserName'>
+                    </label>
+                    <div class="row item">
+                        <div class="col">
+                            <button class="button button-outline button-positive button-block button-small" ng-click='resetFilterInfo();'>
+                                恢复默认
+                            </button>
+                        </div>
+                        <div class="col">
+                            <button class="button button-outline button-positive button-block button-small" ng-click="ensureFilter()">
+                                确认
+                            </button>
+                        </div>
+                    </div>
+                </ion-list>
+            </div>
+        </div>
+        <!-- 固定显示区 结束 -->
+        <!-- 滚动显示区 开始 -->
+        <ion-scroll class="filter-scroll has-subheader">
+            <!-- 下拉刷新 -->
+            <ion-refresher on-refresh="refreshListData()" pulling-text="下拉刷新数据"></ion-refresher>
+            <div class="list ">
+                <ion-item class="item-avatar" ng-repeat='item in checkInfolist'>
+                    <div class="left-img item-image">
+                        <div class="check-icon f12" ng-class="{1: 'energized-bg', 2: 'assertive-bg', 3: 'royal-bg', 4: 'calm-bg', 5: 'balanced-bg'}[item.state]">
+                            <span>{{item.state | CheckStateService | limitTo:1}}<br>{{item.state | CheckStateService | limitTo:-2}}</span>
+                        </div>
+                    </div>
+                    <h3 class="f14">{{item.checkType}}</h3>
+                    <p style="white-space: normal;">{{item.checkProblemName}}</p>
+                    <i class="badge">{{item.checkDate}}</i>
+                </ion-item>
+            </div>
+            <!-- 上拉加载 -->
+            <ion-infinite-scroll on-infinite="loadListData()" distance="1%" icon="ion-loading-c" ng-if="loadCompleted"></ion-infinite-scroll>
+        </ion-scroll>
+        <!-- 滚动显示区 结束 -->
+    </ion-content>
+</ion-view>
+<!-- 固定位置 添加按钮 -->
+<i class="positive-bg btn-fixed-add light" ng-class="filterType || filterDetail ? 'ng-hide':'ng-show'" ui-sref="security-check-add" nav-direction="forward">
+    <i class="icon ion-plus-round"></i>
+</i>
+<!-- 显示 删选菜单中 开始时间 弹框 -->
+<script id="start-time.html" type="text/ng-template">
+    <!-- <ion-modal-view class="show-time-modal"> -->
+        <onezone-datepicker datepicker-object="startTime">
+        </onezone-datepicker>
+    <!-- </ion-modal-view> -->
+</script>
+<!-- 显示 删选菜单中 结束时间 弹框 -->
+<script id="end-time.html" type="text/ng-template">
+    <!-- <ion-modal-view class="show-time-modal"> -->
+        <onezone-datepicker datepicker-object="endTime">
+        </onezone-datepicker>
+    <!-- </ion-modal-view> -->
+</script>

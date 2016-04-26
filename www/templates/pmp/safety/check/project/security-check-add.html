@@ -1,0 +1,137 @@
+<ion-view view-title="新增安全检查">
+<!--     <ion-nav-buttons side="left">
+        <button class="button button-icon ion-ios-arrow-back" nav-direction="back" ui-sref="security-check"></button>
+    </ion-nav-buttons> -->
+    <ion-nav-buttons side="right">
+        <button class="button button-clear" ng-click='submmitOrSavedTolocal();'>提交</button>
+    </ion-nav-buttons>
+    <ion-content>
+        <ion-list>
+            <ion-toggle ng-model="hasProblem.selected">存在问题：</ion-toggle>
+            <ion-item class="item item-icon-right" ng-click="showCheckTime()">
+                检查日期：
+                <span class="badge">{{checkTime.date | date:'yyyy-MM-dd'}}</span>
+                <i class="icon ion-chevron-right f14"></i>
+            </ion-item>
+            <ion-item>
+                检查人员：
+                <span class="badge">余光进</span>
+            </ion-item>
+            <ion-item class="item-icon-right" ng-click="showSheet()">
+                检查类型：
+                <span class="badge dark">{{checkType.typeName}}</span>
+                <i class="icon ion-chevron-right f14"></i>
+            </ion-item>
+            <ion-item class="item-icon-right" ui-sref="security-check-location">
+                检查位置：
+                <span class="badge" ng-hide='postionInfo'>请选择检查位置</span>
+                <span class="badge" ng-show='postionInfo'>{{postionInfo.positionName}}</span>
+                <i class="icon ion-chevron-right f14"></i>
+            </ion-item>
+            <ion-item class="item-icon-right" ui-sref="security-check-manager">
+                处理人员：
+                <span class="badge" ng-hide='solverInfo'>请选择处理人员</span>
+                <span class="badge" ng-show='solverInfo'>{{solverInfo.realName}}</span>
+                <i class="icon ion-chevron-right f14"></i>
+            </ion-item>
+            <ion-item class="item-divider">
+                检查图片
+            </ion-item>
+
+            <ion-item style='padding: 5px 10px 10px 5px;margin: 0;'>
+                <div class="imgWidth1" style="float: left;padding: 5px 0 0 5px;" ng-click="addAttachment()" upload-img>
+
+                    <img ng-src="img/pmp/safety/icon_add_thover.png" width=100%  height="100%">
+
+                </div>
+                <div class="imgWidth1" style="float: left;padding: 5px 0 0 5px;" ng-repeat='img in image_list' ng-click="previewOrDelete($index)" upload-img>
+                    <img class="imgWidth" src="{{img}}" width="100%" height="100%">
+                </div>
+          
+            </ion-item>
+            <ion-item class="item-icon-right" ui-sref="security-check-add-subject" ng-show='hasProblem.selected'>
+                检查问题：
+                <span class="badge">添加</span>
+                <i class="icon ion-chevron-right f14"></i>
+            </ion-item>
+            <div class="" style="line-height: 30px;">
+                <ion-item ng-repeat='item in checkInfoProblemList'>
+                    <div style="height: 34px;margin-top: -15px;">
+                        <button class="button button-clear positive f14" ng-click="deleteCheckConConfirm($index)" style="margin-left: 85%;">
+                            删除
+                        </button>
+                    </div>
+                    <h3 class="check-issue-item-title" style="">
+                    <span class="title" style="font-size: 110%;background: #387ef5;color: #fff;display: inline-block;padding: 7px 11px;border-radius: 5px;">检查内容</span>
+                    <span style="color: gray;margin-left: 20px;">{{item.checkContentName}}</span>
+
+                     </h3>
+                    <div ng-repeat='checkItem in item.checkItems'>
+                        <i class="icon ion-record positive margin-right-5" style="float: left;margin-left: -7px;font-size: 10%;"></i>
+                        <p style="margin-left: 10px;">
+                            <span style="color: #387ef5;">检查项目</span>
+                            <span style="margin-left: 37px;">{{checkItem.checkItemName}}</span>
+                        </p>
+                        <div ng-repeat='checkProblem in checkItem.checkProblems'>
+                            <p style="margin-left: 10px;">
+                                <span>检查问题</span>
+                                <span style="margin-left: 37px;">{{checkProblem.checkProblemName}}</span>
+                            </p>
+                        </div>
+                    </div>
+                </ion-item>
+            </div>
+            <!--       <li class="item check-issue-item">
+                <h3 class="check-issue-item-title">
+                            <span class="title">检查内容</span>
+                            <span>悬挑式脚手架检查</span>
+                            <button class="button button-clear positive f14" ng-click="deleteCheckConConfirm()">
+                                删除
+                            </button>
+                        </h3>
+                <table>
+                    <tr>
+                        <th>
+                            <p><i class="icon ion-record positive margin-right-5"></i>检查项目</p>
+                        </th>
+                        <th>
+                            <p>负载</p>
+                        </th>
+                        <th rowspan="3">
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>检查问题</p>
+                        </td>
+                        <td>
+                            <p>施工负载堆放不均匀每处</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>检查问题</p>
+                        </td>
+                        <td>
+                            <p>架体施工荷载超过设计规定架体施工荷载超过设计规定架体施工荷载超过设计规定架体施工荷载超过设计规定架体施工荷载超过设计规定</p>
+                        </td>
+                    </tr>
+                </table>
+            </li> -->
+        </ion-list>
+    </ion-content>
+</ion-view>
+<!-- 显示 检查日期 弹框 -->
+<script id="check-time.html" type="text/ng-template">
+    <!-- <ion-modal-view class="show-time-modal"> -->
+    <onezone-datepicker datepicker-object="checkTime">
+    </onezone-datepicker>
+    <!-- </ion-modal-view> -->
+</script>
+<script id="checkType.html" type="text/ng-template">
+    <ion-list class='security-check-add-checkType'>
+        <ion-radio class="my-popup" ng-repeat='item in checkTypeList' ng-click="ensureSelectedValue(item)">
+            <span style="font-size: 13px;">{{item.typeName}}</span>
+        </ion-radio>
+    </ion-list>
+</script>

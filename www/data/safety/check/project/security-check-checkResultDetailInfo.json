@@ -1,0 +1,64 @@
+{
+    "status": 200,
+    "msg": "",
+    "items": {
+        "checkId": 397,
+        "checkDate": "2016-02-04",
+        "checkUserId": 11758,
+        "checkUserName": "罗玲",
+        "solveUserId": 11758,
+        "solveUserName": "罗玲",
+        "checkPosId": 23,
+        "positionName": "好",
+        "checkTypeId": 1,
+        "hasProblem": 1,
+        "state": 4,
+        "companyId": 0,
+        "checkInfoProblemClassList": [{
+            "classType": 0,
+            "imagePath": "/securityFile/check/1005412/11758_20160204104232994_MT2016020454345.jpg|/securityFile/check/1005412/11758_20160204104236268_MT2016020457688.jpg",
+            "thumbnailPath": "/securityFile/check/1005412/thumbnail/11758_20160204104232994_MT2016020454345.jpg|/securityFile/check/1005412/thumbnail/11758_20160204104236268_MT2016020457688.jpg",
+            "checkInfoDetailList": [{
+                "checkId": 397,
+                "checkContentId": "19",
+                "checkContentName": "“三宝、四口”及临边防护检查",
+                "checkItemId": "1902",
+                "checkItemName": "安全网",
+                "checkProblemId": "190200",
+                "checkProblemName": "其他",
+                "problemDesc": null
+            }, {
+                "checkId": 397,
+                "checkContentId": "19",
+                "checkContentName": "“三宝、四口”及临边防护检查",
+                "checkItemId": "1902",
+                "checkItemName": "安全网",
+                "checkProblemId": "190204",
+                "checkProblemName": "在建工程外侧未采用密目式安全网封闭或网间不严",
+                "problemDesc": null
+            }, {
+                "checkId": 397,
+                "checkContentId": "19",
+                "checkContentName": "“三宝、四口”及临边防护检查",
+                "checkItemId": "1902",
+                "checkItemName": "安全网",
+                "checkProblemId": "190205",
+                "checkProblemName": "安全网规格、材质不符合要求",
+                "problemDesc": null
+            }]
+        }],
+        "recheckProblemList": [{
+            "reCheckId": 175,
+            "reCheckDate": "2016-02-04",
+            "reCheckUserId": 11758,
+            "reCheckUserName": "罗玲",
+            "checkId": 397,
+            "state": 5,
+            "recheckInfoList": [{
+                "classType": 0,
+                "imagePath": "/securityFile/check/1005412/11758_20160204104320271_MT2016020441239.jpg|/securityFile/check/1005412/11758_20160204104324069_MT2016020444969.jpg",
+                "thumbnailPath": "/securityFile/check/1005412/thumbnail/11758_20160204104320271_MT2016020441239.jpg|/securityFile/check/1005412/thumbnail/11758_20160204104324069_MT2016020444969.jpg"
+            }]
+        }]
+    }
+}

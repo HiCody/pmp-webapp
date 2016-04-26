@@ -1,0 +1,88 @@
+/* 导航页 开始 */
+.home{
+
+}
+
+.home .scroll{
+  height: 100%;
+}
+
+.home .home-icon-list{
+  padding: 0;
+  background-color: #f5f5f5;
+}
+
+.home .home-icon-list .item{
+  padding: 0;
+  border: 0;
+  margin: 0;
+  background-color: #f5f5f5;
+}
+
+.home .home-icon-list .item p{
+  font-size: 12px;
+}
+
+.home .home-icon-list .item .row{
+  padding: 0;
+}
+
+.home .home-icon-list .item .row .col{
+  text-align: center;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.home .home-icon-list .item .row .col.activated{
+  background-color: #e2e2e2;
+}
+
+.home .home-icon-list .item .row .col img{
+  width: 60px;
+  height: 55px;
+}
+
+.home-title-popover{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  overflow: hidden;
+}
+.home-title-popover.ng-hide-add,
+.home-title-popover.ng-hide-remove {
+  transition: 0.3s linear all;
+  -webkit-transition: 0.3s linear all;
+}
+
+.home-title-popover.ng-hide{
+  height: 0;
+}
+.home-title-popover .popover-bg,.popover-bg{
+  background-color: black;
+  opacity: 0.4;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 3;
+}
+.platform-ios .popover .scroll-content{
+  margin: 0;
+}
+
+.home-title-popover .list{
+  z-index: 5;
+}
+/* 导航页 结束 */
+
+
+/* 账号管理 开始 */
+.mine{}
+.mine .list .exit{
+  border-bottom: 0;
+}
+/* 账号管理 结束 */

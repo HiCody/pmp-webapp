@@ -1,0 +1,413 @@
+/* 安全检查项目一览 开始 */
+.safety-check-company-checkview .item-input-wrapper {
+    background: #fff;
+}
+
+.safety-check-company-checkview .fixed-top {
+    height: 55px;
+    border-bottom: 1px solid #ddd;
+}
+
+.safety-check-company-checkview .list-scroll {
+    position: absolute !important;
+    top: 55px !important;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+}
+
+.safety-check-company-checkview .list .item .badge {
+    display: block;
+    font-size: 20px;
+    position: absolute;
+    top: 50%; /*绝对定位top设置50%，配合margin-top设置元素高度的一半负值，元素垂直居中*/
+    margin-top: -13px;
+    right: 10px;
+}
+
+.safety-check-company-checkview .list .item-content {
+    width: 90%;
+}
+
+.safety-check-company-checkview .list .item-content .item-subcontent {
+    padding: 8px 0;
+    margin: 8px 0;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+.safety-check-company-checkview .list .item-subcontent p,
+.safety-check-company-checkview .list .item-content p {
+    color: #000;
+}
+
+.safety-check-company-checkview .list .item-subcontent p span,
+.safety-check-company-checkview .list .item-content p span {
+    color: #666;
+}
+
+/*  安全检查项目一览 结束*/
+
+/* 安全检查时间线 开始*/
+
+.safety-check-company-checkconview .bar-stable {
+    background-color: #d9d9d9 !important;
+}
+
+.safety-check-company-checkconview .tabs {
+    background-color: #d9d9d9 !important;
+}
+
+.safety-check-company-checkconview .icon-size-lg {
+    font-size: 40px;
+}
+
+.safety-check-company-checkconview .pos-absolute-right {
+    position: absolute;
+    right: 8px;
+}
+
+.safety-check-company-checkconview .timeline {
+    position: relative;
+    margin: 15px 0 0 0;
+}
+
+.safety-check-company-checkconview .timeline:before {
+    content: '';
+    position: absolute;
+    top: -65px;
+    bottom: 0;
+    width: 2px;
+    background: #d3d3d3;
+    left: 58px;
+    margin-left: -10px;
+    z-index: 1;
+}
+
+.safety-check-company-checkconview .timeline > li {
+    position: relative;
+    margin: 15px auto;
+}
+
+.safety-check-company-checkconview .timeline > li > i.badge {
+    display: inline;
+    position: absolute;
+    right: 22px;
+    top: 50%;
+    margin-top: -13px;
+    font-size: 20px;
+}
+
+.safety-check-company-checkconview .timeline .timeline-thumb {
+    position: absolute;
+    left: 2px;
+    top: 50%;
+    margin-top: -16px;
+}
+
+.safety-check-company-checkconview .timeline .timeline-thumb.timeline-icon {
+    height: 32px;
+    text-align: center;
+    color: #6fb1f2;
+    /*border: 5px solid #CBD0D3;*/
+}
+
+.safety-check-company-checkconview .timeline .timeline-thumb.timeline-icon i {
+    font-size: 18px;
+    margin: 5px 0;
+    display: block;
+    font-weight: bolder;
+}
+
+.safety-check-company-checkconview .timeline .timeline-thumb.timeline-icon i small {
+    font-size: 10px;
+}
+
+.safety-check-company-checkconview .timeline .timeline-item {
+    margin-left: 64px;
+    /*padding: 5px 5px;*/
+    background: #fff;
+    position: relative;
+    margin-right: 10px;
+}
+
+.safety-check-company-checkconview .timeline .timeline-item p {
+    padding: 5px;
+    margin: 0;
+}
+
+.safety-check-company-checkconview .timeline .timeline-item p span {
+    color: #666;
+}
+
+.safety-check-company-checkconview .timeline .timeline-item .badge {
+    display: inline;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 20px;
+}
+
+.safety-check-company-checkconview .timeline .timeline-stats {
+    position: relative;
+    font-size: 12px;
+    color: #7F8C8D;
+}
+
+.safety-check-company-checkconview .divider-title {
+    /*background: #e4e4e4;*/
+    padding: 5px 15px;
+    color: #6fb1f2;
+    font-size: 16px;
+    height: 30px;
+    position: relative;
+}
+
+.safety-check-company-checkconview .divider-title > span {
+    position: absolute;
+    left: 62px;
+    top: 50%;
+    margin-top: -10px;
+    font-size: 18px;
+}
+
+.safety-check-company-checkconview .divider-title > i {
+    width: 10px;
+    height: 10px;
+    background: #387ef5;
+    display: block;
+    position: absolute;
+    left: 44px;
+    z-index: 2;
+    border-radius: 50%;
+    top: 50%;
+    margin-top: -5px;
+}
+
+/* 安全检查时间线 结束*/
+
+/*  安全检查，
+    添加安全检查 开始 */
+.safety-check-company-checkproject .item h2 {
+    font-weight: bolder;
+}
+
+.safety-check-company-checkproject .item,
+.safety-company-checkview .item .list .item {
+    margin: 0;
+    border: none;
+}
+
+.safety-check-company-checkproject .item-divider,
+.safety-check-company-checkproject .item .list .item-divider {
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.safety-check-company-checkproject .item .list .item-divider {
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.safety-check-company-checkproject .item-divider-title,
+.safety-check-company-checkproject .item-divider-title.activated {
+    border-color: #F0F0F0;
+    background-color: #f5f5f5;
+}
+
+.safety-check-company-checkproject .item-divider-title h3 {
+    padding-left: 5px;
+    margin: 0;
+    border-left: 3px solid #387ef5;
+    color: #387ef5;
+    font-weight: 600;
+    word-spacing: 5px;
+}
+
+.safety-check-company-checkproject.item-divider-title i {
+    color: #ccc;
+}
+
+.safety-check-company-checkproject .item p,
+.safety-check-company-checkproject .item tr {
+    color: #000;
+    border-bottom: 1px solid #f5f5f5;
+    padding: 8px 8px;
+    margin: 0;
+}
+
+.safety-check-company-checkproject .item p:last-child,
+.safety-check-company-checkproject .item tr:last-child,
+.safety-check-company-checkproject .item .border-box p {
+    border-bottom: none;
+}
+
+.safety-check-company-checkproject .item p span,
+.safety-check-company-checkproject .item p i {
+    float: right;
+}
+
+.safety-check-company-checkproject .item p i {
+    font-size: 20px;
+    margin-left: 5px;
+}
+
+.safety-check-company-checkproject .item .border-box {
+    border: 1px solid #387ef5;
+    border-radius: 3px
+}
+
+.safety-check-company-checkproject .item .border-box p {
+    text-overflow: clip;
+    white-space: normal;
+}
+
+.safety-check-company-checkproject .relative-issue-list.list .item {
+    background: #f5f5f5;
+    border: 1px solid #e5e5e5;
+}
+
+.safety-check-company-checkproject .relative-issue-list .item img {
+    height: 50px;
+}
+
+.safety-check-company-checkproject .relative-issue-list .item h3 .title {
+    background: #387ef5;
+    color: #fff;
+    display: inline-block;
+    padding: 8px 20px;
+    border-radius: 10px;
+    margin-right: 5px;
+}
+
+.safety-check-company-checkproject .relative-issue-list .item table {
+    margin-left: 9px;
+}
+
+.safety-check-company-checkproject .relative-issue-list .item tr,
+.safety-check-company-checkproject .relative-issue-list .item p {
+    padding: 5px 10px;
+}
+
+.safety-check-company-checkproject .relative-issue-list .item p,
+.safety-check-company-checkproject .relative-issue-list .item span {
+    color: #A9A9A9;
+    text-align: left;
+}
+
+.safety-check-company-checkproject .relative-issue-list .item th:first-child p {
+    color: #387ef5;
+    font-size: 18px;
+}
+
+.safety-check-company-checkproject .relative-issue-list .item p i {
+    margin-right: 5px;
+    position: absolute;
+    left: 12px;
+    font-size: 18px;
+}
+
+.lighter {
+    color: #ddd;
+}
+
+.positive {
+    color: #387ef5 !important;
+}
+
+.safety-check-company-checkproject-edit {
+}
+
+.safety-check-company-checkproject-edit .list .item {
+    position: relative;
+}
+
+.safety-check-company-checkproject-edit .list .item .icon-edit {
+    position: absolute;
+    font-size: 20px;
+    top: 50%;
+    margin-top: -10px;
+    right: 25px;
+}
+
+.safety-check-company-checkproject-edit .item textarea {
+    float: right;
+    padding: 5px;
+}
+
+.safety-check-company-checkproject-edit .item-divider-title h3 i {
+    font-size: 25px;
+}
+
+.safety-check-company-checkproject-edit .item-divider button {
+    top: 0;
+    color: #222;
+}
+
+/* 安全检查，
+   添加安全检查 结束 */
+
+/* 添加安全检查 项目人员信息 开始*/
+.safety-check-company-projectperson .input-label {
+    text-align: left;
+    width: 25%;
+}
+
+/* 添加安全检查 项目人员信息 结束*/
+
+/* 添加安全检查 抽查情况 开始 */
+.safety-check-company-checkrandom ion-scroll.scroll {
+    position: absolute !important;
+    top: 31px !important;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.safety-check-company-checkrandom tr td {
+    border-right: 1px solid #4d4d4d;
+    border-bottom: 1px solid #4d4d4d;
+    padding: 5px;
+}
+
+.safety-check-company-checkrandom thead tr td:first-child,
+.safety-check-company-checkrandom table tr td:first-child {
+    width: 15%;
+}
+
+.safety-check-company-checkrandom thead tr td:last-child,
+.safety-check-company-checkrandom table tr:first-child td:last-child {
+    width: 20%;
+}
+
+.safety-check-company-checkrandom thead td {
+    padding: 5px;
+    padding-bottom: 5px;
+}
+
+.safety-check-company-checkrandom td:last-child {
+    border-right: none;
+}
+
+.safety-check-company-checkrandom table tr td:first-child,
+.safety-check-company-checkrandom table tr td:last-child,
+.safety-check-company-checkrandom table tr:first-child td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.safety-check-company-checkrandom table tr td.left {
+    text-align: left;
+}
+
+.safety-check-company-checkrandom td p {
+    font-size: 12px;
+    margin-bottom: 0;
+}
+
+/* 添加安全检查 抽查情况 结束 */
+
+
+
+
+

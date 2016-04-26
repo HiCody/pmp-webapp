@@ -1,0 +1,128 @@
+<ion-view view-title="安全检查">
+    <ion-nav-buttons side="left">
+        <button class="button button-icon ion-ios-arrow-left" nav-direction="back"
+                ui-sref="security-check-projects-timeline">
+        </button>
+    </ion-nav-buttons>
+    
+    <ion-content class="safety-check-company-checkproject">
+        <div class="item">
+            <h2>辽阳东路购物中心项目</h2>
+        </div>
+        <ul class="list no-margin-bottom">
+            <div class="item item-divider item-icon-right item-divider-title"
+                 ng-click="subjectPersonInfo = !subjectPersonInfo">
+                <h3>项目人员信息</h3>
+                <i class="icon f18" ng-class="subjectPersonInfo?'ion-ios-arrow-down':'ion-ios-arrow-up'"></i>
+            </div>
+            <li class="item no-padding-top no-padding-bottom" ng-show="!subjectPersonInfo">
+                <p>项目经理：张国荣<span>13822596590</span></p>
+                <p>技术负责人：张国荣<span>15896635558</span></p>
+                <p>质检员：吴彦祖<span>18800265598</span></p>
+                <p>安全员：张国荣<span>13456985210</span></p>
+            </li>
+            <div class="item item-divider item-icon-right item-divider-title" ng-click="subjectIntro = !subjectIntro">
+                <h3>项目概况</h3>
+                <i class="icon f18" ng-class="subjectIntro?'ion-ios-arrow-down':'ion-ios-arrow-up'"></i>
+            </div>
+            <li class="item no-padding-top no-padding-bottom" ng-show="!subjectIntro">
+                <table class="width-full">
+                    <tr>
+                        <td><p>建筑面积：222.0m<sup>2</sup></p></td>
+                        <td><p>造价：1200万元</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>地上层数：33层</p></td>
+                        <td><p>地上层数：12层</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>结构类型：全现浇</p></td>
+                        <td><p>参建人数：5人</p></td>
+                    </tr>
+                </table>
+            </li>
+            <div class="item item-divider item-icon-right item-divider-title">
+                <h3>项目时间与进展</h3>
+            </div>
+            <li class="item no-padding-top no-padding-bottom">
+                <p>实际开工时间<span>2016-01-13</span></p>
+                <p>实际完工时间<span>2017-06-09</span></p>
+                <p>这是一段文字</p>
+            </li>
+            <div class="item item-divider item-icon-right item-divider-title">
+                <h3>检查情况</h3>
+            </div>
+            <li class="item no-padding-top no-padding-bottom">
+                <p>检查日期<span>2016-03-23</span></p>
+                <p ui-sref="check-random-info">抽查情况 <i class="icon ion-ios-arrow-right" style="color: #ccc"></i><span>6项有问题</span>
+                </p>
+            </li>
+            <div class="item item-divider item-icon-right item-divider-title">
+                <h3>改进要求</h3>
+            </div>
+            <li class="item">
+                <div class="border-box">
+                    <p>1、改进要求改进要求改进要求改进要求改进要求改进要求改进要求</p>
+                    <p>2、改进要求</p>
+                </div>
+            </li>
+        </ul>
+        <ul class="list ">
+            <div class="item item-divider item-icon-right item-divider-title no-border-top">
+                <h3>相关问题</h3>
+            </div>
+            <li class="item no-padding-left no-padding-right no-border">
+                <ul class="list relative-issue-list">
+                    <li class="item item-divider f14">检查图片</li>
+                    <li class="item">
+                        <img src="img/appliction_more.png">
+                    </li>
+                    <li class="item item-divider f14">检查问题</li>
+                    <li class="item">
+                        <h3><span class="title">检查内容</span> <span>悬挑式脚手架检查</span></h3>
+                        <table>
+                            <tr>
+                                <th><p><i class="icon ion-record positive margin-right-5"></i>检查项目</p></th>
+                                <th><p>负载</p></th>
+                            </tr>
+                            <tr>
+                                <td><p>检查问题</p></td>
+                                <td><p>施工负载堆放不均匀每处</p></td>
+                            </tr>
+                            <tr>
+                                <td><p>检查问题</p></td>
+                                <td><p>架体施工荷载超过设计规定</p></td>
+                            </tr>
+                        </table>
+                    </li>
+                </ul>
+            </li>
+            <li class="item no-padding-left no-padding-right no-border">
+                <ul class="list relative-issue-list">
+                    <li class="item item-divider f14">检查图片</li>
+                    <li class="item">
+                        <img src="img/appliction_more.png">
+                    </li>
+                    <li class="item item-divider f14">检查问题</li>
+                    <li class="item">
+                        <h3><span class="title">检查内容</span> <span>悬挑式脚手架检查</span></h3>
+                        <table>
+                            <tr>
+                                <th><p><i class="icon ion-record positive margin-right-5"></i>检查项目</p></th>
+                                <th><p>负载</p></th>
+                            </tr>
+                            <tr>
+                                <td><p>检查问题</p></td>
+                                <td><p>施工负载堆放不均匀每处</p></td>
+                            </tr>
+                            <tr>
+                                <td><p>检查问题</p></td>
+                                <td><p>架体施工荷载超过设计规定</p></td>
+                            </tr>
+                        </table>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </ion-content>
+</ion-view>

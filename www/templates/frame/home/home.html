@@ -1,0 +1,124 @@
+<ion-view>
+    <!-- 导航 开始 -->
+    <ion-nav-buttons side="left">
+        <button class="button button-icon ion-person" nav-direction="forward" ui-sref="frame/home-mine">
+        </button>
+    </ion-nav-buttons>
+    <ion-nav-title>
+        <div class="h1 title" ng-click="showPopover()">元图测试项目部
+            <i class="icon" ng-class="homePopover ? 'ion-arrow-up-b':'ion-arrow-down-b'"></i>
+        </div>
+    </ion-nav-title>
+    <ion-nav-buttons side="right">
+        <button class="button button-icon ion-chatbubble-working" nav-direction="forward"
+                ui-sref="frame/home-informationCentre">
+        </button>
+    </ion-nav-buttons>
+    <!-- 导航 结束 -->
+
+    <ion-content class="scroll-content has-header home" overflow-scroll="false">
+        <ion-list class="home-icon-list">
+            <ion-item>
+                <div class="row">
+                    <a class="col" ui-sref="security-info" nav-direction="forward">
+                        <img src="img/frame/engineering_inspection.png">
+
+                        <p>安全管理</p>
+                    </a>
+                    <a class="col">
+                        <img src="img/frame/cailiao_guanli.png">
+
+                        <p>材料管理</p>
+                    </a>
+                    <a class="col">
+                        <img src="img/frame/construction_schedule.png">
+
+                        <p>设备管理</p>
+                    </a>
+                </div>
+            </ion-item>
+            <ion-item>
+                <div class="row">
+                    <a class="col">
+                        <img src="img/frame/total_construction_plan.png">
+
+                        <p>进度管理</p>
+                    </a>
+                    <a class="col">
+                        <img src="img/frame/engineering_material_management.png">
+
+                        <p>违章曝光</p>
+                    </a>
+                    <a class="col">
+                        <img src="img/frame/engineering_forecast.png">
+
+                        <p>工程物资管理</p>
+                    </a>
+                </div>
+            </ion-item>
+            <ion-item>
+                <div class="row">
+                    <a class="col">
+                        <img src="img/frame/engineering_knowledge_base.png">
+
+                        <p>工程预计算</p>
+                    </a>
+                    <a class="col">
+                        <img src="img/frame/chengben_guanli.png">
+
+                        <p>工程知识库</p>
+                    </a>
+                    <a class="col">
+                        <img src="img/frame/cailiao_guanli.png">
+
+                        <p>成本管理</p>
+                    </a>
+                </div>
+            </ion-item>
+            <ion-item>
+                <div class="row">
+                    <a class="col">
+                        <img src="img/frame/common_project_project_review3.png">
+
+                        <p>风险管理</p>
+                    </a>
+                    <a class="col">
+                        <img src="img/frame/zulin_guanli.png">
+
+                        <p>租赁管理</p>
+                    </a>
+                    <a class="col">
+                        <img src="img/frame/appliction_more.png">
+
+                        <p>更多</p>
+                    </a>
+                </div>
+            </ion-item>
+        </ion-list>
+
+        <div class="home-title-popover ng-hide" ng-show="homePopover">
+            <div class="popover-bg" ng-click="hidePopover()"></div>
+            <div class="list">
+                <div class="item home-title" ng-click="hidePopover()" ui-sref="security-check-projects-view">
+                    集团北京分公司
+                </div>
+                <div class="item home-title" ng-click="hidePopover()">
+                    XXXXXX项目2
+                </div>
+                <div class="item home-title" ng-click="hidePopover()">
+                    XXXXXX项目3
+                </div>
+                <div class="item home-title" ng-click="hidePopover()">
+                    XXXXXX项目3
+                </div>
+                <div class="item home-title" ng-click="hidePopover()">
+                    XXXXXX项目3
+                </div>
+                <div class="item home-title" ng-click="hidePopover()">
+                    XXXXXX项目3
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
+
